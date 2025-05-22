@@ -22,9 +22,14 @@ for (let i = 0; i < 150; i++) {
 
 // Setting the name on page load
 window.onload = function () {
-    //const nameFromURL = window.studentName; // Will have to replae this file with the user name input file
-    document.getElementById("name").innerText = window.studentName
-    alert("Welcome! Your certificate is ready.");
+    const playerName = localStorage.getItem("playerName"); // 
+    if (playerName) {
+        document.getElementById("name").innerText = playerName;
+        alert(`Welcome ${playerName}! Your certificate is ready.`);
+    } else {
+        document.getElementById("name").innerText = "Player Name";
+        alert("No player name found. Please start from the main menu.");
+    }
 };
 
 // Downloading certificate as image from the download button
