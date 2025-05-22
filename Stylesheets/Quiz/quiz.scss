@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Press+Start+2P&display=swap');
+
+@mixin standard-phone ($maxwidth) {
+    @media screen and (max-width: $maxwidth) {
+        @content;
+    }
+}
+@mixin phone-tablet ($minwidth, $maxwidth) {
+    @media screen and (min-width:$minwidth) and (max-width: $maxwidth) {
+        @content;
+    }
+}
+@mixin tablet-laptop ($minwidth) {
+    @media screen and (min-width:$minwidth) {
+        @content;
+    }
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Press Start 2P", system-ui;
+}
+
+// INSTRUCTION PAGE
+#instructions{
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    z-index: 5;
+    background-color: rgba(0, 0, 0, .5);
+    //rgba(53, 9, 103, .5)
+    padding: 50px;
+    div{
+        background-color: #521d8f;
+        margin: auto;
+    }
+}
+
+#instructions-container h1, #instructions-container p{
+    position: relative;
+    padding: 20px;
+    width: 70%;
+    margin: auto;
+}
+
+#instructions-container h1{text-align: center;}
+#instructions-container p{
+    width: 85%;
+    @include tablet-laptop(1024px){
+        width: 65%;
+    }
+}
+
+#instructions-container{width: 80%;}
+.instruction-btns{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 250px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+// Game Over 
+#game-over{
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    display: none;
+    flex-direction: column;
+    z-index: 5;
+    background-color: rgba(0, 0, 0, .5);
+    //rgba(53, 9, 103, .5)
+    padding: 50px;
+    div{
+        background-color: #521d8f;
+        margin: auto;
+    }
+}
+
+#game-over-container h1, #game-over-container p{
+    position: relative;
+    text-align: center;
+    padding: 40px;
+    width: 70%;
+    margin: auto;
+}
+
+#game-over-container{width: 80%;}
+.game-over-btns{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 250px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+// MAIN FRAME
+main{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.quiz-container{
+    background-color: #350967;
+    width: 80%;
+    height: 90%;
+    max-width: 1300px;
+    text-align: center;
+    padding: 50px 0 50px 0;
+    position: relative;
+    #player-score{
+        padding: 20px;
+    }
+    @include standard-phone(700px){max-width: 320px;}
+    @include phone-tablet(701px, 1024px){max-width: 701px;}
+}
+
+//SECTIONS
+.qa-frames{
+    margin: auto;
+    width: 90%;
+}
+
+// SCORING - LIFE
+#scoring-life{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.player-attempts, .player-score{
+    img{
+        width: 50px;
+        padding: 2px;
+    }
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.attemptImg{
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+// QUESTION
+#question-frame{
+    height: 200px;
+    background-color: #67a7c1;
+    margin: 30px auto 30px auto;
+    h2{padding: 20px;}
+}
+
+//OPTIONS
+#option-frame{
+    display: grid;
+    grid-template-columns: 49% 49%;
+    column-gap: 2%;
+    row-gap: 10px;
+    margin-bottom: 50px;
+}
+.option-container{
+    background-color: #67a7c1;
+    display: flex;
+    flex-direction: row;
+    row-gap: 30px;
+    &:disabled{
+        background-color: #97dbf7;
+    }
+}
+.option-container:hover{
+    background-color: #97dbf7;
+}
+.option-container h3{
+    background-color: #83d2f2;
+    padding: 40px;
+}
+.option-container p{
+    text-align: center;
+    padding: 20px;
+}
+
+// BUTTONS
+#quiz-btns{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-items: center;
+    background-color: #97dbf7;
+    @include standard-phone(480px){display: block;}
+    display: grid;
+    grid-template-columns: 50% 50%;
+    text-align: center;
+    grid-area: three;
+}
+
+#check-btn, #next-btn, #cont-btn, #start-btn, #try-again-btn, #lessons-btn{
+    padding: 10px 20px 10px 20px;
+    margin: 10px auto 10px auto;
+    border-radius: 50px;
+    background-color: #67a7c1;
+    color: black;
+    font-weight: bold;
+    &:hover{background-color: #83d2f2;}
+    @include standard-phone(480px){
+        width: 95%;
+        display: block;
+        padding: 10px 30px 10px 30px;
+        margin: 20px auto 0 auto;
+        font-size: 11px;
+    }
+    @include phone-tablet(481px, 700px){
+        width: 90%;
+        font-size: 10px;
+        padding: 10px 15px 10px 15px;
+    }
+    @include phone-tablet(701px, 1024px){
+        font-size: small;
+    }
+    @include tablet-laptop(1024px){
+        width: 90%;
+        font-size: medium;
+    }
+}
+
+#start-btn{
+    display: none;
+}
+
+#check-btn{
+    position: fixed;
+    width: 200px;
+    &:disabled{
+        background-color: grey;
+    }
+}
+#next-btn{
+    position: fixed;
+    width: 200px;
+    //display: none;
+}

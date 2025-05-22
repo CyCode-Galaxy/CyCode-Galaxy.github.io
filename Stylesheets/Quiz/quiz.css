@@ -1,0 +1,267 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Press+Start+2P&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Press Start 2P", system-ui;
+}
+
+#instructions {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  z-index: 5;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 50px;
+}
+#instructions div {
+  background-color: #521d8f;
+  margin: auto;
+}
+
+#instructions-container h1, #instructions-container p {
+  position: relative;
+  padding: 20px;
+  width: 70%;
+  margin: auto;
+}
+
+#instructions-container h1 {
+  text-align: center;
+}
+
+#instructions-container p {
+  width: 85%;
+}
+@media screen and (min-width: 1024px) {
+  #instructions-container p {
+    width: 65%;
+  }
+}
+
+#instructions-container {
+  width: 80%;
+}
+
+.instruction-btns {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  width: 250px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+#game-over {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  display: none;
+  flex-direction: column;
+  z-index: 5;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 50px;
+}
+#game-over div {
+  background-color: #521d8f;
+  margin: auto;
+}
+
+#game-over-container h1, #game-over-container p {
+  position: relative;
+  text-align: center;
+  padding: 40px;
+  width: 70%;
+  margin: auto;
+}
+
+#game-over-container {
+  width: 80%;
+}
+
+.game-over-btns {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  width: 250px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.quiz-container {
+  background-color: #350967;
+  width: 80%;
+  height: 90%;
+  max-width: 1300px;
+  text-align: center;
+  padding: 50px 0 50px 0;
+  position: relative;
+}
+.quiz-container #player-score {
+  padding: 20px;
+}
+@media screen and (max-width: 700px) {
+  .quiz-container {
+    max-width: 320px;
+  }
+}
+@media screen and (min-width: 701px) and (max-width: 1024px) {
+  .quiz-container {
+    max-width: 701px;
+  }
+}
+
+.qa-frames {
+  margin: auto;
+  width: 90%;
+}
+
+#scoring-life {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.player-attempts, .player-score {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.player-attempts img, .player-score img {
+  width: 50px;
+  padding: 2px;
+}
+
+.attemptImg {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+#question-frame {
+  height: 200px;
+  background-color: #67a7c1;
+  margin: 30px auto 30px auto;
+}
+#question-frame h2 {
+  padding: 20px;
+}
+
+#option-frame {
+  display: grid;
+  grid-template-columns: 49% 49%;
+  -moz-column-gap: 2%;
+       column-gap: 2%;
+  row-gap: 10px;
+  margin-bottom: 50px;
+}
+
+.option-container {
+  background-color: #67a7c1;
+  display: flex;
+  flex-direction: row;
+  row-gap: 30px;
+}
+.option-container:disabled {
+  background-color: #97dbf7;
+}
+
+.option-container:hover {
+  background-color: #97dbf7;
+}
+
+.option-container h3 {
+  background-color: #83d2f2;
+  padding: 40px;
+}
+
+.option-container p {
+  text-align: center;
+  padding: 20px;
+}
+
+#quiz-btns {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-items: center;
+  background-color: #97dbf7;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  text-align: center;
+  grid-area: three;
+}
+@media screen and (max-width: 480px) {
+  #quiz-btns {
+    display: block;
+  }
+}
+
+#check-btn, #next-btn, #cont-btn, #start-btn, #try-again-btn, #lessons-btn {
+  padding: 10px 20px 10px 20px;
+  margin: 10px auto 10px auto;
+  border-radius: 50px;
+  background-color: #67a7c1;
+  color: black;
+  font-weight: bold;
+}
+#check-btn:hover, #next-btn:hover, #cont-btn:hover, #start-btn:hover, #try-again-btn:hover, #lessons-btn:hover {
+  background-color: #83d2f2;
+}
+@media screen and (max-width: 480px) {
+  #check-btn, #next-btn, #cont-btn, #start-btn, #try-again-btn, #lessons-btn {
+    width: 95%;
+    display: block;
+    padding: 10px 30px 10px 30px;
+    margin: 20px auto 0 auto;
+    font-size: 11px;
+  }
+}
+@media screen and (min-width: 481px) and (max-width: 700px) {
+  #check-btn, #next-btn, #cont-btn, #start-btn, #try-again-btn, #lessons-btn {
+    width: 90%;
+    font-size: 10px;
+    padding: 10px 15px 10px 15px;
+  }
+}
+@media screen and (min-width: 701px) and (max-width: 1024px) {
+  #check-btn, #next-btn, #cont-btn, #start-btn, #try-again-btn, #lessons-btn {
+    font-size: small;
+  }
+}
+@media screen and (min-width: 1024px) {
+  #check-btn, #next-btn, #cont-btn, #start-btn, #try-again-btn, #lessons-btn {
+    width: 90%;
+    font-size: medium;
+  }
+}
+
+#start-btn {
+  display: none;
+}
+
+#check-btn {
+  position: fixed;
+  width: 200px;
+}
+#check-btn:disabled {
+  background-color: grey;
+}
+
+#next-btn {
+  position: fixed;
+  width: 200px;
+}/*# sourceMappingURL=quiz.css.map */
