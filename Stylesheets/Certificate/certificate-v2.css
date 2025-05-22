@@ -97,19 +97,19 @@ body {
 
 /* Downloading button styles */
 #download-btn {
-  position: fixed;
-  bottom: 40px;
-  right: 40px;
-  padding: 12px 24px;
-  background-color: #00ffe1;
-  color: #111;
-  border: none;
-  border-radius: 25px;
-  font-size: 16px;
-  font-weight: bold;
-  cursor: pointer;
-  z-index: 2;
-  box-shadow: 0 0 10px #00ffe1;
+    position: fixed;
+    bottom: 110px;
+    right: 40px;
+    padding: 12px 24px;
+    background-color: #00ffe1;
+    color: #111;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 2;
+    box-shadow: 0 0 10px #00ffe1;
 }
 
 /* Stars container to cover the whole screen */
@@ -130,6 +130,22 @@ body {
   border-radius: 50%;
   animation: twinkle var(--duration) infinite alternate ease-in-out;
   opacity: 0.8;
+}
+
+#thankyou-btn {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    padding: 12px 24px;
+    background-color: #00ffe1;
+    color: #111;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 2;
+    box-shadow: 0 0 10px #00ffe1;
 }
 
 /* Animation to make the stars twinkle */
