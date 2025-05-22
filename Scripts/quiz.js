@@ -100,7 +100,7 @@ function checkChoice() {
         shuffledArray.push(randomSort([...answersArray]));
         console.log(shuffledArray);
     } else if (initialNum == 11) {
-        window.location.href = "/Pages/certificate.html";
+        window.location.href = "/Pages/certificate-v2.html";
     }
     
     if (playerChoice == "Correct") {

@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Press+Start+2P&display=swap");
+/* Basic body styles */
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom, #0f0c29, #302b63, #24243e);
+  font-family: "Press Start 2P", system-ui;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Centering the certificate container */
+.certificate-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Main certificate styling */
+.certificate {
+  background: rgba(20, 20, 40, 0.95);
+  border-radius: 20px;
+  border: 2px solid white;
+  padding: 60px 50px;
+  color: white;
+  text-align: center;
+  max-width: 700px;
+  width: 100%;
+  position: relative;
+}
+
+.certificate img {
+  width: 100%;
+}
+@media screen and (min-width: 375px) and (max-width: 426px) {
+  .certificate img {
+    width: 350px;
+  }
+}
+
+/* Name section */
+.certificate h3 {
+  font-size: 25px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: black;
+}
+@media screen and (min-width: 375px) and (max-width: 426px) {
+  .certificate h3 {
+    top: 47%;
+    font-size: 10px;
+  }
+}
+
+/* Signature and Date layout */
+.signature-date {
+  position: absolute;
+  /*display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+  gap: 30px;*/
+  position: absolute;
+  bottom: 125px;
+  left: 200px;
+}
+@media screen and (min-width: 375px) and (max-width: 426px) {
+  .signature-date {
+    top: 47%;
+    font-size: 10px;
+  }
+}
+
+/* Each section width for date and signature */
+.signature-date .section {
+  width: 45%;
+}
+
+/* Input field styles */
+.signature-date input {
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid #000000;
+  color: black;
+  text-align: center;
+  font-size: 16px;
+  outline: none;
+  margin-bottom: 5px;
+}
+
+/* Downloading button styles */
+#download-btn {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  padding: 12px 24px;
+  background-color: #00ffe1;
+  color: #111;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 2;
+  box-shadow: 0 0 10px #00ffe1;
+}
+
+/* Stars container to cover the whole screen */
+#stars-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+}
+
+/* Individual star styling */
+.star {
+  position: absolute;
+  background: white;
+  border-radius: 50%;
+  animation: twinkle var(--duration) infinite alternate ease-in-out;
+  opacity: 0.8;
+}
+
+/* Animation to make the stars twinkle */
+@keyframes twinkle {
+  0% {
+    opacity: 0.2;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}/*# sourceMappingURL=certificate-v2.css.map */

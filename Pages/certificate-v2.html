@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificate of Achievement</title>
+    <link rel="stylesheet" href="/Stylesheets/Certificate/certificate-v2.css"/>
+</head>
+<body>
+    <!-- Container for star background animation -->
+    <div id="stars-container"></div>
+
+    <!-- Wrapper for the certificate layout -->
+    <div class="certificate-wrapper">
+        <div class="certificate">
+            <img src="/Image/Certificate/junior space coder (2).png" alt="">
+            <!-- Placeholder text for the player name -->
+            <h3 id="name">
+                Player Name
+            </h3>
+
+            <!-- Signature and Date input section -->
+            <div class="signature-date">
+                <!-- Date input box -->
+                <div class="section">
+                    <input type="text" placeholder="DD/MM/YYYY" id="date"/>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Button to trigger the PDF download -->
+    <button id="download-btn">
+        Download PDF
+    </button>
+
+    <!-- Capturing the HTML in form of canvas -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="/Scripts/main-menu.js"></script>
+    <script src="/Scripts/certificate-v2.js"></script>
+
+    
+</body>
+</html>
