@@ -56,15 +56,15 @@ function filterNone (){
 }
 
 document.getElementById("menu-start-btn").addEventListener("click", () => {
-    studentName = studentInput.value;
+    studentName = studentInput.value.trim();
 
-    console.log(studentCharacter)
-    if (studentName == ""){
-        alert("You forgot something! Please be sure to tell us your name and choose a character.");    
-    }else {
-        window.location.href = "/Pages/grade-level.html";
+    if (studentName === "") {
+        alert("You forgot something! Please be sure to tell us your name and choose a character.");
+    } else {
+        localStorage.setItem("playerName", studentName); 
+        window.location.href = "/Pages/grade-level.html"; 
     }
-})
+});
 
 charFrog.addEventListener("click", () => {
     charFrog.style.filter = "grayscale(1)"
