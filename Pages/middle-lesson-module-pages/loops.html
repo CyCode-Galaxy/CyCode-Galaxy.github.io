@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Middle School Programming Module</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="/Stylesheets/middle-lesson-module-pages/loops.css">
+</head>
+<body>
+    <!-- Lesson Header -->
+    <header class="lesson-header py-4 mb-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-8">
+                    <!-- Title and Introduction of the Subject -->
+                    <h1 class="mt-2">Programming & Coding (Python/JavaScript)</h1>
+                    <p class="lead">Learn repetitive taks with loops</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Container-->
+    <div class="container">
+        <div class="row">
+            <!-- Sidebar Navigation -->
+            <div class="col-lg-3 d-none d-lg-block">
+                <div class="sidebar">
+                    <div class="card lesson-card mb-4">
+                        <div class="card-header">
+                            <h5 class="mb-0">Module Contents</h5>
+                        </div>
+                        <div class="card-body p-0">
+                            <!-- Navigation Items -->
+                            <a href="/Pages/middle-lesson-module-pages/variables.html" class="text-decoration-none">
+                                <div class="sidebar-item">
+                                    <i class="fas fa-code me-2"></i> Variables and Data Types
+                                </div>
+                            </a>
+                            <a href="/Pages/middle-lesson-module-pages/conditionals.html" class="text-decoration-none">
+                                <div class="sidebar-item">
+                                    <i class="fas fa-question-circle me-2"></i> Conditionals
+                                </div>
+                            </a>
+                            
+                            <div class="sidebar-item active">
+                                <i class="fas fa-redo me-2"></i> Loops
+                            </div>
+                            <a href="/Pages/middle-lesson-module-pages/functions.html" class="text-decoration-none">
+                                <div class="sidebar-item">
+                                    <i class="fas fa-cubes me-2"></i> Functions
+                                </div>
+                            </a>
+                            <a href="/Pages/middle-lesson-module-pages/debugging.html" class="text-decoration-none">
+                                <div class="sidebar-item">
+                                    <i class="fas fa-bug me-2"></i> Debugging
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Lesson Content -->
+            <div class="col-lg-9">
+                <div class="card lesson-card">
+                    <!-- Lesson Header and Time Badge -->
+                    <div class="card-header d-flex justify-content-between align-items-center">
+                        <h3 class="mb-0">Loops</h3>
+                        <span class="badge bg-primary">40 min</span>
+                    </div>
+
+                    <!-- Lesson Body -->
+                    <div class="lesson-content">
+                        <!-- Introduction to Loops -->
+                        <h4>What are Loops?</h4>
+                        <p>In computer programming, a loop is a sequence of instructions that is continually repeated until a certain condition is reached. Loops allow us to repeat a block of code multiple times. This is useful when you want to perform a task repeatedly without writing the same code over and over.</p>
+
+                        <!-- Real-World Analogy Box -->
+                        <div class="analogy-box">
+                            <h5><i class="fas fa-undo-alt me-2"></i>Real-World Analogy</h5>
+                            <p>Loops are like your morning routine - you repeat the same steps (brush teeth, get dressed, eat breakfast) every day, but with small variations.</p>
+                        </div>
+
+                        <!-- For Loops -->
+                        <h4 class="mt-4">For Loops</h4>
+                        <p>Use for loops when you know exactly how many times you want to repeat something:</p>
+
+                        <div class="row mt-3">
+                            <div class="col-md-6">
+                                <div class="card h-100">
+                                    <div class="card-header bg-dark text-white">
+                                        <h6 class="mb-0">JavaScript</h6>
+                                    </div>
+
+                                    <div class="card-body">
+                                        <div class="code-block">
+                                            <pre>// Count from 1 to 5
+for (let i = 1; i <= 5; i++) {
+    console.log(i);
+}
+
+// Loop through array items
+const planets = ["Mercury", "Venus", "Earth"];
+for (let i = 0; i < planets.length; i++) {
+    console.log(planets[i]);
+}
+
+// Modern for-of loop
+for (const planet of planets) {
+    console.log(planet);
+}</pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="card h-100">
+                                    <div class="card-header bg-dark text-white">
+                                        <h6 class="mb-0">Python</h6>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="code-block">
+                                            <pre># Count from 1 to 5
+for i in range(1, 6):
+    print(i)
+
+# Loop through list items
+planets = ["Mercury", "Venus", "Earth"]
+for planet in planets:
+    print(planet)
+
+# With index
+for i, planet in enumerate(planets):
+    print(f"Planet {i+1}: {planet}"")</pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- While Loops -->
+                        <h4 class="mt-4">While Loops</h4>
+                        <p>Use while loops when you want to repeat until a certain condition changes:</p>
+
+                        <div class="row mt-3">
+                            <div class="col-md-6">
+                                <div class="card h-100">
+                                    <div class="card-header">
+                                        <h6 class="mb-0">JavaScript</h6>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="code-block">
+                                            <pre> // Countdown from 5
+let count = 5;
+while (count > 0) {
+    console.log(count);
+    count--;
+}
+
+// User input validation
+let userInput;
+while (true) {
+    userInput = prompt("Enter yes or no");
+    if (userInput === "yes" || userInput === "no") {
+        break;
+    }
+    console.log("Invalid input!");
+}</pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card h-100">
+                                    <div class="card-header">
+                                        <h6 class="mb-0">Python</h6>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="code-block">
+                                            <pre># Countdown from 5
+count = 5
+while count > 0:
+    print(count)
+    count -= 1
+
+# User input validation
+while True:
+    user_input = input("Enter yes or no: ")
+    if user_input in ["yes", "no"]:
+        break
+    print("Invalid input!")</pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                            
+                        <!-- Loop Control -->
+                        <h4 class="mt-4">Loop Control Statements</h4>
+                        <p>These statements change how loops execute:</p>
+
+                        <div class="table-responsive mt-3">
+                            <table class="table table-bordered">
+                                <thead class="table-dark">
+                                    <tr>
+                                        <th>Statement</th>
+                                        <th>JavaScript</th>
+                                        <th>Python</th>
+                                        <th>Description</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    <tr>
+                                        <td>Break</td>
+                                        <td><code>break;</code></td>
+                                        <td><code>break</code></td>
+                                        <td>Exit the loop immediately</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Continue</td>
+                                        <td><code>continue;</code></td>
+                                        <td><code>continue</code></td>
+                                        <td>Skip to the next iteration</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Else</td>
+                                        <td>N/A</td>
+                                        <td><code>else:</code></td>
+                                        <td>Python-only: runs if loop completes normally (no break)</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- Nested Loops -->
+                        <h4 class="mt-5">Nested Loops</h4>
+                        <p>You can put loops inside other loops for complex patterns:</p>
+
+                        <div class="row mt-3">
+                            <div class="col-md-6">
+                                <div class="card h-100">
+                                    <div class="card-header">
+                                        <h6 class="mb-0">JavaScript</h6>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="code-block">
+                                            <pre> // Multiplication table
+for (let i = 1; i <=5; i++) {
+    let row = "";
+    for (let j = 1; j <=5; j++) {
+        row += (i * j) + "\t";
+    }
+    console.log(row);
+}</pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card h-100">
+                                    <div class="card-header">
+                                        <h6 class="mb-0">Python</h6>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="code-block">
+                                            <pre># Multiplication table
+for i in range(1, 6):
+    for j in range(1, 6):
+        print(i * j, end="\t")
+    print()</pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Embeded Video -->
+                        <div class="video-container ratio ratio-16x9 mt-4">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/v-K-4KuA8mQ?si=_hNsHh0f5elphtqT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+
+                        <!-- Interactive Exercise -->
+                        <div class="interactive-box mt-4">
+                            <h5><i class="fas fa-laptop-code me-2"></i>Coding Challenge</h5>
+                            <p>Create a program that:</p>
+                            <ol>
+                                <li>Prints numbers 1 to 100</li>
+                                <li>For multiples of 3, print "Fizz" instead</li>
+                                <li>For multiples of 5, print "Buzz" instead</li>
+                                <li>For multiples of both 3 and 5, print "FizzBuzz"</li>
+                            </ol>
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h6>JavaScript Solution</h6>
+                                    <textarea class="form-control code-editor" id="js-loop-code" rows="8" placeholder="Write your JavaScript solution here..."></textarea> 
+                                </div>
+                                <div class="col-md-6">
+                                    <h6>Python Solution</h6>
+                                    <textarea class="form-control code-editor" id="py-loop-code" rows="8" placeholder="Write your Python solution here..."></textarea> 
+                                </div>
+                            </div>
+
+                            <div class="mt-3">
+                                <button class="btn btn-primary" id="test-loop">Test Your Code</button>
+                                <button class="btn btn-outline-secondary ms-2" id="show-loop-solution">Show Solution</button>
+                            </div>
+
+                            <div id="loop-output" class="mt-3 p-3 bg-light rounded"></div>
+
+                            <div id="loop-solution" class="mt-3 d-none">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="code-block">
+                                            <pre>// JavaScript Solution
+for (let i = 1; i <= 100; i++) {
+    if (i % 15 === 0) {
+        console.log("FizzBuzz");
+    } else if (i % 3 === 0) {
+        console.log("Fizz");
+    } else if (i % 5 === 0) {
+        console.log("Buzz");
+    } else {
+        console.log(i);
+    }
+}</pre>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="code-block">
+                                            <pre># Python Solution
+for i in range(1, 101):
+    if i % 15 == 0:
+        print("FizzBuzz")
+    elif i % 3 == 0:
+        print("Fizz")
+    elif i % 5 == 0:
+        print("Buzz")
+    else:
+        print(i)</pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Recap -->
+                        <h4 class="mt-5">Key Takeaways</h4>
+                        <ul class="mb-4">
+                            <li class="mb-2">Use <code>for</code> loops when you know how many iteration you need</li>
+                            <li class="mb-2">Use <code>while</code> loops when you need to loop until a condition changes</li>
+                            <li class="mb-2"><code>break</code> exits a loop immediately</li>
+                            <li class="mb-2"><code>continue</code> skips to the next iteration</li>
+                            <li>Nested loops are powerful but can impact performance</li>
+                        </ul>
+                        
+                        <!-- Navigation -->
+                        <div class="d-flex justify-content-between mt-5">
+                            <a href="/Pages/middle-lesson-module-pages/conditionals.html" class="btn btn-outline-primary">
+                                <i class="fas fa-arrow-left me-2"></i> Previous: Conditionals
+                            </a>
+                            <a href="/Pages/middle-lesson-module-pages/functions.html" class="btn btn-primary">
+                                Next: Functions <i class="fas fa-arrow-right ms-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/Scripts/middle-lesson-module-pages/loops.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primary School Programming Module - Events</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="/Stylesheets/primary-lesson-module-pages/events.css">
+</head>
+<body>
+    <!-- Lesson Header -->
+    <header class="lesson-header py-4 mb-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-8">
+                    <!-- Title and Introduction of the Subject -->
+                    <h1 class="mt-2">Programming (Block-Based Coding)</h1>
+                    <p class="lead">Learn programming fundamentals with fun drag-and-drop blocks</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <div class="container">
+        <div class="row">
+            <!-- Sidebar Navigation -->
+            <div class="col-lg-3 d-none d-lg-block">
+                <div class="sidebar">
+                    <div class="card lesson-card mb-4">
+                        <div class="card-header">
+                            <h5 class="mb-0">Module Contents</h5>
+                        </div>
+                        <div class="card-body p-0">
+                            <!-- Navigation Items -->
+                            <a href="/Pages/primary-lesson-module-pages/sequences.html" class="text-decoration-none">
+                                <div class="sidebar-item">
+                                    <i class="fas fa-play-circle me-2"></i> Sequences
+                                </div>
+                            </a>
+                            <a href="/Pages/primary-lesson-module-pages/loops.html" class="text-decoration-none">
+                                <div class="sidebar-item">
+                                    <i class="fas fa-redo me-2"></i> Loops
+                                </div>
+                            </a>
+                            <a href="/Pages/primary-lesson-module-pages/conditionals.html" class="text-decoration-none">
+                                <div class="sidebar-item">
+                                    <i class="fas fa-question-circle me-2"></i> Conditionals
+                                </div>
+                            </a>
+                            <a href="/Pages/primary-lesson-module-pages/debugging.html" class="text-decoration-none">
+                                <div class="sidebar-item">
+                                    <i class="fas fa-bug me-2"></i> Debugging
+                                </div>
+                            </a>
+                            <div class="sidebar-item active">
+                                <i class="fas fa-bolt me-2"></i> Events
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Lesson Content -->
+            <div class="col-lg-9">
+                <div class="card lesson-card">
+                    <!-- Lesson Header and Time Badge -->
+                    <div class="card-header d-flex justify-content-between align-items-center">
+                        <h3 class="mb-0">Events (Responding to Actions)</h3>
+                        <span class="badge bg-primary">20 min</span>
+                    </div>
+
+                    <!-- Main lesson content -->
+                    <div class="lesson-content">
+                        <!-- Introduction to Events -->
+                        <h4>What are Events?</h4>
+                        <p>In computer programming, Events let your program respond to user actions like clicks, typing or moving the mouse. They make your programs interactive!</p>
+
+                        <!-- Fun Fact box -->
+                        <div class="interactive-element">
+                            <h5><i class="fas fa-lightbulb me-2"></i>Fun Fact!</h5>
+                            <p>Every time you click, scroll, or type on a webpage, you're triggering events. A single webpage can process hundreds of events every second!</p>
+                        </div>
+
+                        <!--Events Types Section -->
+                        <h4 class="mt-4">Common Event Types</h4>
+                        <div class="row mt-3">
+                            <!-- Click event example -->
+                            <div class="col-md-6">
+                                <div class="card h-100">
+                                    <div class="card-header bg-light">
+                                        <h6 class="mb-0">Click Events</h6>
+                                    </div>
+                                    <div class="card-body">
+                                        <p>Triggered when a user clicks an element</p>
+                                        <div class="code-block">
+document.getElementById("btn") <br>
+  .addEventListener("click", function() {<br>
+    alert("Button clicked!");<br>
+});
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Keyboard event example -->
+                            <div class="col-md-6">
+                                <div class="card h-100">
+                                    <div class="card-header bg-light">
+                                        <h6 class="mb-0">Keyboard Events</h6>
+                                    </div>
+                                    <div class="card-body">
+                                        <p>Triggered when keys are pressed</p>
+                                        <div class="code-block">
+document.addEventListener("keydown",<br> 
+  function (event) {<br>
+    console.log("Key pressed:", event.key);<br>
+});<br>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- More examples section -->
+                        <div class="event-example mt-4">
+                            <h5>More Event Examples</h5>
+                            <div class="row">
+                                <!-- Mousemove -->
+                                <div class="col-md-4">
+                                    <div class="code-block">
+// Mouse move
+element.addEventListener(
+    "mousemove", trackMouse
+);
+                                    </div>
+                                </div>
+
+                                <!-- Form Submit -->
+                                <div class="col-md-4">
+                                    <div class="code-block">
+// Form submit
+form.addEventListener(
+    "submit", handleSubmit
+);
+                                    </div>
+                                </div>
+
+                                <!-- Page Load -->
+                                <div class="col-md-4">
+                                    <div class="code-block">
+// Page loaded
+window.addEventListener(
+    "load", initPage
+);
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Video Embeded -->
+                        <div class="video-container ratio ratio-16x9 mt-4">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/Qk1Cr_E-GCw?si=33s8ObkBiX2-QiH1" title="What is Event" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+
+                        <!-- Drag and drop block-based challenge -->
+                        <div class="interactive-element mt-4">
+                            <h5><i class="fas fa-puzzle-piece me-2"></i>Drag and Drop Challenge</h5>
+                            <p>Arrange these blocks to create an event listener that shows a message when a button is clicked:</p>
+
+                            <!-- Draggable Blocks -->
+                            <div id="block-source" class="d-flex flex-wrap gap-2 mb-3">
+                                <span class="badge bg-primary p-2 draggable-block" draggable="true">when [button] clicked</span>
+                                <span class="badge bg-success p-2 draggable-block" draggable="true">say "Hello!"</span>
+                                <span class="badge bg-warning text-dark p-2 draggable-block" draggable="true">play sound [meow]</span>
+                                <span class="badge bg-info p-2 draggable-block" draggable="true">change color</span>
+                            </div>
+
+                            <!-- Target Area for dropping blocks -->
+                            <p class="mb-1"><strong>Drop blocks here to create your event handler:</strong></p>
+                            <div id="block-target" class="d-flex flex-wrap gap-2"></div>
+
+                            <!-- Check answer button -->
+                            <button class="btn btn-primary btn-lesson-action mt-3" id="check-sequence">
+                                <i class="fas fa-check me-2"></i> Check My Event Code
+                            </button>
+                        </div>
+
+                        <!-- Recap -->
+                        <h4 class="mt-5">What You Learned</h4>
+                        <ul class="mb-4">
+                            <li class="mb-2">Events respond to user actions</li>
+                            <li class="mb-2">Click events handle button presses</li>
+                            <li class="mb-2">Keyboard events detect typing</li>
+                            <li>Many other events exist for different interactions</li>
+                        </ul>
+
+                        <!-- Navigation Buttons -->
+                        <div class="d-flex justify-content-between mt-5">
+                            <a href="/Pages/primary-lesson-module-pages/debugging.html" class="btn btn-outline-primary btn-lesson-action">
+                                <i class="fas fa-arrow-left me-2"></i> Previous: Debugging
+                            </a>
+
+                            <a href="/Pages/quiz.html" class="btn btn-primary btn-lesson-action">
+                                <i class="fas fa-redo me-2"></i> Start Quiz
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/Scripts/primary-lesson-module-pages/events.js"></script>
+    
+</body>
+</html>

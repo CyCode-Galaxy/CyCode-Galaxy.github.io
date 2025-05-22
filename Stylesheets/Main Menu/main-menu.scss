@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Press+Start+2P&display=swap');
+
+@mixin standard-phone ($maxwidth) {
+    @media screen and (max-width: $maxwidth) {
+        @content;
+    }
+}
+@mixin phone-tablet ($minwidth, $maxwidth) {
+    @media screen and (min-width:$minwidth) and (max-width: $maxwidth) {
+        @content;
+    }
+}
+@mixin tablet-laptop ($minwidth) {
+    @media screen and (min-width:$minwidth) {
+        @content;
+    }
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Press Start 2P", system-ui;
+}
+
+.menu-container{
+    z-index: 5;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-menu{
+    width: 40%;
+}
+
+#chars-slider{
+    position: relative;
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.char{
+    width: 100%;
+    display: none;
+    margin: auto;
+}
+
+img.displayChar{
+    display: block;
+    margin: auto;
+}
+
+.btn-left, .btn-right{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    background-color: rgba(255, 255, 255, 0.716);
+    cursor: pointer;
+    padding: 20px 15px;
+}
+
+.btn-left{
+    left: 0;
+}
+
+.btn-right{
+    right: 0;
+}
+
+
+
+#player-info-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+#name-player{
+    width: 80%;
+    height: 40px;
+    margin: 20px;
+    padding: 20px;
+}
+
+#info-btns-container button{
+    padding: 10px 20px 10px 20px;
+    margin: 10px auto 10px auto;
+    border-radius: 10px;
+    background-color: #67a7c1;
+    color: black;
+    font-weight: bold;
+    &:hover{background-color: #83d2f2;}
+    @include standard-phone(480px){
+        width: 95%;
+        display: block;
+        padding: 10px 30px 10px 30px;
+        margin: 20px auto 0 auto;
+        font-size: 11px;
+    }
+    @include phone-tablet(481px, 700px){
+        width: 90%;
+        font-size: 10px;
+        padding: 10px 15px 10px 15px;
+    }
+    @include phone-tablet(701px, 1024px){
+        font-size: small;
+    }
+    @include tablet-laptop(1024px){
+        width: 90%;
+        font-size: medium;
+    }
+}

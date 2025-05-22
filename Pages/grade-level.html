@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade Selection - Cycode Galaxy</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+    
+    /* Setting default margins, padding and font for the entire page */
+    
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    }
+
+    /* Galaxy background with stars */
+    body {
+        background: radial-gradient(ellipse at bottom, #0a0a1f 0%, #1c003b 100%);
+        overflow-x: hidden;
+        height: 100vh;
+        width: 100vw;
+        color: white;
+        position: relative;
+    }
+
+    /* === Stars animation === */
+
+    /* Container for stars */
+    .stars {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+    }
+
+    /* Individual Star Styling */
+    .star {
+        position: absolute;
+        background-color: white;
+        border-radius: 50%;
+        animation: twinkle var(--duration) infinite ease-in-out;
+    }
+
+    /* Star twinkling animation */
+    @keyframes twinkle {
+        0%, 100% {opacity: 0.2; }
+        50% { opacity: 1; }
+    }
+
+    /* Main container */
+    .container {
+        position: relative;
+        z-index: 10;
+        padding-top: 3rem;
+    }
+
+    /* Title styling */
+    h1 {
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
+        text-align: center;
+        background: linear-gradient(to right, #00d2ff, #3a7bd5);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-shadow: 0 0 15px rgba(58, 123, 213, 0.3);
+    }
+
+    /* Grade cards */
+    .grade-card {
+        transition: all 0.4s ease;
+        cursor: pointer;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(8px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 12px;
+        overflow: hidden;
+        position: relative;
+        color: white;
+    }
+
+    /* Light effect on cards when sweeping across it */
+    .grade-card::before {
+        content: '';
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: linear-gradient(
+            to bottom right,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 0.1) 50%,
+            rgba(255, 255, 255, 0) 100%
+        );
+        transform: rotate(30deg);
+        transition: all 0.6s ease;
+    }
+
+    /* Hover animation */
+    .grade-card:hover {
+        transform: translateY(-10px) scale(1.03);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+        border: 1px solid rgba(255, 255, 255, 0.4);
+    }
+
+    .grade-card:hover::before {
+        left: 100%;
+    }
+
+    /* Card body */
+    .card-body {
+        position: relative;
+        z-index: 2;
+        padding: 2rem;
+    }
+
+    .card-title {
+        font-size: 1.8rem;
+        margin-bottom: 0.5rem;
+        font-weight: bold;
+    }
+
+    .age-group {
+        font-size: 0.9rem;
+        color: rgba(255, 255, 255, 0.7);
+        margin-bottom: 1.5rem;
+    }
+
+    /* Buttons Styling */
+    .btn-primary {
+        background: linear-gradient(45deg, #3a7bd5, #00d2ff);
+        border: none;
+        border-radius: 50px;
+        padding: 0.6rem 1.5rem;
+        font-weight: bold;
+        position: relative;
+        overflow: hidden;
+        transition: all 0.3s;
+    }
+
+    .btn-primary:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(0, 210, 255, 0.4);
+    }
+
+    /* Modal Styling */
+    .modal-content {
+        background: rgba(26, 26, 59, 0.95);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 15px;
+        color: white;
+    }
+
+    .modal-header {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .modal-title {
+        color: #00d2ff;
+        font-weight: bold;
+    }
+
+    .btn-close {
+        filter: invert(1);
+    }
+
+    /* Module sections */
+    .module-section {
+        border-radius: 10px;
+        padding: 1.5rem;
+        height: 100%;
+        transition: all 0.3s;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .module-section::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 5px;
+        background: linear-gradient(90deg, #3a7bd5, #00d2ff);
+    }
+
+    .module-section:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .programming {
+        background: rgba(58, 123, 213, 0.1);
+        border-right: 1px solid rgba(58, 123, 213, 0.3);
+    }
+
+    .cybersecurity {
+        background: rgba(0, 210, 255, 0.1);
+    }
+
+    /* Topic List Styling */
+    .topic-list {
+        padding-left: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .topic-list li {
+        margin-bottom: 0.8rem;
+        position: relative;
+        list-style-type: none;
+    }
+
+    .topic-list li::before {
+        content: '▹';
+        position: absolute;
+        left: -1.5rem;
+        color: #00d2ff;
+    }
+
+    /* Success Button Styling */
+    .btn-success {
+        background: linear-gradient(45deg, #00b09b, #96c93d);
+        border: none;
+        border-radius: 50px;
+        padding: 0.6rem 1.5rem;
+        font-weight: bold;
+    }
+
+    .btn-success:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(0, 176, 155, 0.4);
+    }
+
+
+    /* Floating astronaut animation */
+    .astronaut {
+        position: absolute;
+        width: 100px;
+        right: 5%;
+        top: 20%;
+        animation: float 6s ease-in-out infinite;
+        z-index: 5;
+        opacity: 0.8;
+    }
+
+    @keyframes float {
+        0%, 100% { transform: translateY(0) rotate(0deg); }
+        50% { transform: translateY(-20px) rotate(5deg); }
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+        h1 {
+            font-size: 2rem;
+        }
+        .astronaut {
+            display: none;
+        }
+    }
+    </style>
+</head>
+<body>
+    <!-- Creation of Stars background -->
+    <div class="stars" id="stars"></div>
+
+    <!-- Creation of a Computer clipart -->
+    <img src="https://cdn-icons-png.flaticon.com/512/5549/5549637.png" class="astronaut" alt="Astronaut">
+
+    <!-- Creation of a container for Grade Level -->
+    <div class="container py-5">
+        <h1 class="text-center mb-5">Select Your Grade Level</h1>
+
+        <!-- Creating Row for the Grade Level Card-->
+        <div class="row g-4">
+            <!-- Primary School Card -->
+            <div class="col-md-4">
+                <div class="card grade-card" data-bs-toggle="modal" data-bs-target="#primaryModal">
+                    <div class="card-body text-center">
+                        <h3 class="card-title">Primary School</h3>
+                        <p class="age-group">Grade 3-5 (Ages 8-11)</p>
+                        <button class="btn btn-primary mt-3">Explore Modules</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Middle School Card -->
+            <div class="col-md-4">
+                <div class="card grade-card" data-bs-toggle="modal" data-bs-target="#middleModal">
+                    <div class="card-body text-center">
+                        <h3 class="card-title">Middle School</h3>
+                        <p class="age-group">Grade 6-8 (Ages 11-14)</p>
+                        <button class="btn btn-primary mt-3">Explore Modules</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- High School Card -->
+            <div class="col-md-4">
+                <div class="card grade-card" data-bs-toggle="modal" data-bs-target="#secondaryModal">
+                    <div class="card-body text-center">
+                        <h3 class="card-title">Secondary School</h3>
+                        <p class="age-group">Grade 9-12 (Ages 14-18)</p>
+                        <button class="btn btn-primary mt-3">Explore Modules</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Primary School Modal -->
+    <div class="modal fade" id="primaryModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">🚀 Primary School Modules (Grades 3-5, Ages 8-11)</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <!-- Programming Module -->
+                        <div class="col-md-6 module-section programming">
+                            <h4>👩‍💻 Programming (Block-Based Coding)</h4>
+                            <p class="mb-3"><strong>Goal:</strong>To learn foundational coding logic using drag-and-drop blocks.</p>
+                            <ul class="topic-list">
+                                <li>Sequences (Order of commands)</li>
+                                <li>Loops (Repeat actions)</li>
+                                <li>Conditionals (If-Then logic)</li>
+                                <li>Debugging (Fixing errors)</li>
+                                <li>Events (Triggering actions)</li>
+                            </ul>
+                            <a href="/Pages/primary-lesson-module-pages/sequences.html" class="btn btn-success mt-3">Start Lesson Module</a>
+                        </div>
+
+                        <!-- Cybersecurity Module -->
+                        <div class="col-md-6 module-section cybersecurity">
+                            <h4>🛡️ Cybersecurity</h4>
+                            <p class="mb-3"><strong>Goal:</strong>To learn internet safety and threat awareness.</p>
+                            <ul class="topic-list">
+                                <li>Strong Passwords (Mixing characters)</li>
+                                <li>Phishing (Fake emails/links)</li>
+                                <li>Private vs. Public Info (What to share online)</li>
+                                <li>Software Updates (Why they matter)</li>
+                                <li>Safe Browsing (Trusted websites)</li>
+                            </ul>
+                            <a href="/Pages/primary-lesson-module-pages/strong-passwords.html" class="btn btn-success mt-3">Start Lesson Module</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Middle School Modal -->
+    <div class="modal fade" id="middleModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">🚀 Middle School Modules (Grades 6-8, Ages 11-14)</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <!-- Programming Module -->
+                        <div class="col-md-6 module-section programming">
+                            <h4>👩‍💻 Programming & Coding (Python/JavaScript)</h4>
+                            <p class="mb-3"><strong>Goal:</strong>To learn foundational coding logic, debugging and problem-solving.</p>
+                            <ul class="topic-list">
+                                <li>Variables and Data Types (Strings, Numbers, Booleans)</li>
+                                <li>Conditionals (if/else statements)</li>
+                                <li>Loops (for, while)</li>
+                                <li>Functions (Reusable code blocks)</li>
+                                <li>Debugging (Error identification and fixing)</li>
+                            </ul>
+                            <a href="/Pages/middle-lesson-module-pages/variables.html" class="btn btn-success mt-3">Start Lesson Module</a>
+                        </div>
+                        
+                        <!-- Cybersecurity Module -->
+                        <div class="col-md-6 module-section cybersecurity">
+                            <h4>🛡️ Cybersecurity & Ethical Hacking</h4>
+                            <p class="mb-3"><strong>Goal:</strong>To learn ethical hacking concepts, safe practices and cyber threats.</p>
+                            <ul class="topic-list">
+                                <li>Password Cracking (Brute force vs. Dictionary attacks)</li>
+                                <li>Phishing & Social Engineering</li>
+                                <li>Encryption Basics (Caesar cipher, hashing)</li>
+                                <li>Network Security (Firewalls, VPNs)</li>
+                                <li>Ethical Hacking (White-hat vs. Black-hat)</li>
+                            </ul>
+                            <a href="/Pages/middle-lesson-module-pages/password-cracking.html" class="btn btn-success mt-3">Start Lesson Module</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Senior School Modal -->
+    <div class="modal fade" id="secondaryModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">🚀 Senior School Modules (Grades 9-12, Ages 14-18)</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <!-- Programming Module -->
+                        <div class="col-md-6 module-section programming">
+                            <h4>👩‍💻 Advanced Programming Challenges</h4>
+                            <p class="mb-3"><strong>Goal:</strong> To learn building practical skills in Python, HTML & Databases through cyber-themed tasks.</p>
+                            <ul class="topic-list">
+                                <li>Python (Intermediate)</li>
+                                <li>HTML/CSS (Web Exploits/Defense)</li>
+                                <li>Databases (SQL/NoSQL)</li>
+                                <li>Debugging (Advanced)</li>
+                                <li>API Development and Security</li>
+                            </ul>
+                            <a href="python.html" class="btn btn-success mt-3">Start Lesson Module</a>
+                        </div>
+
+                        <!-- Cybersecurity Module -->
+                        <div class="col-md-6 module-section cybersecurity">
+                            <h4>🛡️ Cybersecurity Threats & Defense</h4>
+                            <p class="mb-3"><strong>Goal:</strong>To learn to simulate real-world attacks and counter measures.</p>
+                            <ul class="topic-list">
+                                <li>DDoS Attacks</li>
+                                <li>Malware Analysis</li>
+                                <li>Encryption/Decryption</li>
+                                <li>Network Defense</li>
+                                <li>AI-Driven Threats</li>
+                            </ul>
+                            <a href="ddos-attack.html" class="btn btn-success mt-3">Start Lesson Module</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script src="/Scripts/grade-level.js"></script>
+
+</body>
+</html>

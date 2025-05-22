@@ -1,0 +1,554 @@
+{
+    "programming_primary" : [
+        {
+            "question_number" : 1,
+            "question" : "A set of logical steps carried out in order.",
+            "opt1" : "Event",
+            "opt2" : "Sequence",
+            "opt3" : "Series",
+            "opt4" : "Chain",
+            "correct_answer" : "Sequence"
+        },
+        {
+            "question_number" : 2,
+            "question" : "The process of finding and fixing errors or bugs in the code.",
+            "opt1" : "Repairing",
+            "opt2" : "Conditioning",
+            "opt3" : "Debugging",
+            "opt4" : "Looping",
+            "correct_answer" : "Debugging"
+        },
+        {
+            "question_number" : 3,
+            "question" : "Allows a block of code to be executed repeatedly as long as the given condition remains true.",
+            "opt1" : "do..while loop",
+            "opt2" : "for loop",
+            "opt3" : "forEach loop",
+            "opt4" : "while loop",
+            "correct_answer" : "while loop"
+        },
+        {
+            "question_number" : 4,
+            "question" : "What is the correct syntax of an if..else condition?",
+            "opt1" : "if (condition 1){\n} elif (condition 2) {\n}",
+            "opt2" : "if (condition 1){\n} else if (condition 2) {\n}",
+            "opt3" : "if (condition 1){\n} if else (condition 2) {\n}",
+            "opt4" : "if (condition 1){\n} else (condition 2) {\n}",
+            "correct_answer" : "if (condition 1){\n} else if (condition 2) {\n}"
+        },
+        {
+            "question_number" : 5,
+            "question" : "Helps us print strings, numbers, javascript objects or variables on the console.",
+            "opt1" : "console.log()",
+            "opt2" : "consoleLog()",
+            "opt3" : "console.log = ''",
+            "opt4" : "consoleLog = ''",
+            "correct_answer" : "console.log()"
+        },
+        {
+            "question_number" : 6,
+            "question" : "Lets your program respond to user actions.",
+            "opt1" : "Keys",
+            "opt2" : "Events",
+            "opt3" : "Process",
+            "opt4" : "Response",
+            "correct_answer" : "Events"
+        },
+        {
+            "question_number" : 7,
+            "question" : "The term '_________' was due to a moth stuck in a computer that caused errors.",
+            "opt1" : "Debugging",
+            "opt2" : "Cleaning",
+            "opt3" : "Repairing",
+            "opt4" : "Error Message",
+            "correct_answer" : "Debugging"
+        },
+        {
+           "question_number" : 8,
+            "question" : "Allows you to execute a block of code repeatedly based on a specified condition.",
+            "opt1" : "for loop",
+            "opt2" : "while loop",
+            "opt3" : "forEach loop",
+            "opt4" : "do..while loop",
+            "correct_answer" : "for loop" 
+        },
+        {
+            "question_number" : 9,
+            "question" : "Which of these gets triggered when a user clicks an element.",
+            "opt1" : ".addEventListener('click', function)",
+            "opt2" : ".addEventListener('keydown', function)",
+            "opt3" : ".addEventListener('submit', function)",
+            "opt4" : ".addEventListener('load', function)",
+            "correct_answer" : ".addEventListener('click', function)"
+        },
+        {
+            "question_number" : 10,
+            "question" : "Which of these operators are used to check if two values are not equal?",
+            "opt1" : "/=",
+            "opt2" : "-=",
+            "opt3" : "!=",
+            "opt4" : "==",
+            "correct_answer" : "!="
+        }
+    ],
+    "programming_middle" : [
+        {
+            "question_number" : 1,
+            "question" : "Question number 1",
+            "opt1" : "1. Wrong One",
+            "opt2" : "1. Wrong Two",
+            "opt3" : "1. Wrong Three",
+            "opt4" : "1. Correct",
+            "correct_answer" : "1. Correct"
+        },
+        {
+            "question_number" : 2,
+            "question" : "Question number 2",
+            "opt1" : "2. Wrong One",
+            "opt2" : "2. Wrong Two",
+            "opt3" : "2. Wrong Three",
+            "opt4" : "2. Correct",
+            "correct_answer" : "2. Correct"
+        },
+        {
+            "question_number" : 3,
+            "question" : "Question number 3",
+            "opt1" : "3. Wrong One",
+            "opt2" : "3. Wrong Two",
+            "opt3" : "3. Wrong Three",
+            "opt4" : "3. Correct",
+            "correct_answer" : "3. Correct"
+        },
+        {
+            "question_number" : 4,
+            "question" : "Question number 4",
+            "opt1" : "4. Wrong One",
+            "opt2" : "4. Wrong Two",
+            "opt3" : "4. Wrong Three",
+            "opt4" : "4. Correct",
+            "correct_answer" : "4. Correct"
+        },
+        {
+            "question_number" : 5,
+            "question" : "Question number 5",
+            "opt1" : "5. Wrong One",
+            "opt2" : "5. Wrong Two",
+            "opt3" : "5. Wrong Three",
+            "opt4" : "5. Correct",
+            "correct_answer" : "5. Correct"
+        },
+        {
+            "question_number" : 6,
+            "question" : "Question number 6",
+            "opt1" : "6. Wrong One",
+            "opt2" : "6. Wrong Two",
+            "opt3" : "6. Wrong Three",
+            "opt4" : "6. Correct",
+            "correct_answer" : "6. Correct"
+        },
+        {
+            "question_number" : 7,
+            "question" : "Question number 7",
+            "opt1" : "7. Wrong One",
+            "opt2" : "7. Wrong Two",
+            "opt3" : "7. Wrong Three",
+            "opt4" : "7. Correct",
+            "correct_answer" : "7. Correct"
+        },
+        {
+            "question_number" : 8,
+            "question" : "Question number 8",
+            "opt1" : "8. Wrong One",
+            "opt2" : "8. Wrong Two",
+            "opt3" : "8. Wrong Three",
+            "opt4" : "8. Correct",
+            "correct_answer" : "8. Correct"
+        },
+        {
+            "question_number" : 9,
+            "question" : "Question number 9",
+            "opt1" : "9. Wrong One",
+            "opt2" : "9. Wrong Two",
+            "opt3" : "9. Wrong Three",
+            "opt4" : "9. Correct",
+            "correct_answer" : "9. Correct"
+        },
+        {
+            "question_number" : 10,
+            "question" : "Question number 10",
+            "opt1" : "10. Wrong One",
+            "opt2" : "10. Wrong Two",
+            "opt3" : "10. Wrong Three",
+            "opt4" : "10. Correct",
+            "correct_answer" : "10. Correct"
+        }
+    ],
+    "programming_secondary" : [
+        {
+            "question_number" : 1,
+            "question" : "Question number 1",
+            "opt1" : "1. Wrong One",
+            "opt2" : "1. Wrong Two",
+            "opt3" : "1. Wrong Three",
+            "opt4" : "1. Correct",
+            "correct_answer" : "1. Correct"
+        },
+        {
+            "question_number" : 2,
+            "question" : "Question number 2",
+            "opt1" : "2. Wrong One",
+            "opt2" : "2. Wrong Two",
+            "opt3" : "2. Wrong Three",
+            "opt4" : "2. Correct",
+            "correct_answer" : "2. Correct"
+        },
+        {
+            "question_number" : 3,
+            "question" : "Question number 3",
+            "opt1" : "3. Wrong One",
+            "opt2" : "3. Wrong Two",
+            "opt3" : "3. Wrong Three",
+            "opt4" : "3. Correct",
+            "correct_answer" : "3. Correct"
+        },
+        {
+            "question_number" : 4,
+            "question" : "Question number 4",
+            "opt1" : "4. Wrong One",
+            "opt2" : "4. Wrong Two",
+            "opt3" : "4. Wrong Three",
+            "opt4" : "4. Correct",
+            "correct_answer" : "4. Correct"
+        },
+        {
+            "question_number" : 5,
+            "question" : "Question number 5",
+            "opt1" : "5. Wrong One",
+            "opt2" : "5. Wrong Two",
+            "opt3" : "5. Wrong Three",
+            "opt4" : "5. Correct",
+            "correct_answer" : "5. Correct"
+        },
+        {
+            "question_number" : 6,
+            "question" : "Question number 6",
+            "opt1" : "6. Wrong One",
+            "opt2" : "6. Wrong Two",
+            "opt3" : "6. Wrong Three",
+            "opt4" : "6. Correct",
+            "correct_answer" : "6. Correct"
+        },
+        {
+            "question_number" : 7,
+            "question" : "Question number 7",
+            "opt1" : "7. Wrong One",
+            "opt2" : "7. Wrong Two",
+            "opt3" : "7. Wrong Three",
+            "opt4" : "7. Correct",
+            "correct_answer" : "7. Correct"
+        },
+        {
+            "question_number" : 8,
+            "question" : "Question number 8",
+            "opt1" : "8. Wrong One",
+            "opt2" : "8. Wrong Two",
+            "opt3" : "8. Wrong Three",
+            "opt4" : "8. Correct",
+            "correct_answer" : "8. Correct"
+        },
+        {
+            "question_number" : 9,
+            "question" : "Question number 9",
+            "opt1" : "9. Wrong One",
+            "opt2" : "9. Wrong Two",
+            "opt3" : "9. Wrong Three",
+            "opt4" : "9. Correct",
+            "correct_answer" : "9. Correct"
+        },
+        {
+            "question_number" : 10,
+            "question" : "Question number 10",
+            "opt1" : "10. Wrong One",
+            "opt2" : "10. Wrong Two",
+            "opt3" : "10. Wrong Three",
+            "opt4" : "10. Correct",
+            "correct_answer" : "10. Correct"
+        }
+    ],
+    "cybersecurity_primary" : [
+        {
+            "question_number" : 1,
+            "question" : "Question number 1",
+            "opt1" : "1. Wrong One",
+            "opt2" : "1. Wrong Two",
+            "opt3" : "1. Wrong Three",
+            "opt4" : "1. Correct",
+            "correct_answer" : "1. Correct"
+        },
+        {
+            "question_number" : 2,
+            "question" : "Question number 2",
+            "opt1" : "2. Wrong One",
+            "opt2" : "2. Wrong Two",
+            "opt3" : "2. Wrong Three",
+            "opt4" : "2. Correct",
+            "correct_answer" : "2. Correct"
+        },
+        {
+            "question_number" : 3,
+            "question" : "Question number 3",
+            "opt1" : "3. Wrong One",
+            "opt2" : "3. Wrong Two",
+            "opt3" : "3. Wrong Three",
+            "opt4" : "3. Correct",
+            "correct_answer" : "3. Correct"
+        },
+        {
+            "question_number" : 4,
+            "question" : "Question number 4",
+            "opt1" : "4. Wrong One",
+            "opt2" : "4. Wrong Two",
+            "opt3" : "4. Wrong Three",
+            "opt4" : "4. Correct",
+            "correct_answer" : "4. Correct"
+        },
+        {
+            "question_number" : 5,
+            "question" : "Question number 5",
+            "opt1" : "5. Wrong One",
+            "opt2" : "5. Wrong Two",
+            "opt3" : "5. Wrong Three",
+            "opt4" : "5. Correct",
+            "correct_answer" : "5. Correct"
+        },
+        {
+            "question_number" : 6,
+            "question" : "Question number 6",
+            "opt1" : "6. Wrong One",
+            "opt2" : "6. Wrong Two",
+            "opt3" : "6. Wrong Three",
+            "opt4" : "6. Correct",
+            "correct_answer" : "6. Correct"
+        },
+        {
+            "question_number" : 7,
+            "question" : "Question number 7",
+            "opt1" : "7. Wrong One",
+            "opt2" : "7. Wrong Two",
+            "opt3" : "7. Wrong Three",
+            "opt4" : "7. Correct",
+            "correct_answer" : "7. Correct"
+        },
+        {
+            "question_number" : 8,
+            "question" : "Question number 8",
+            "opt1" : "8. Wrong One",
+            "opt2" : "8. Wrong Two",
+            "opt3" : "8. Wrong Three",
+            "opt4" : "8. Correct",
+            "correct_answer" : "8. Correct"
+        },
+        {
+            "question_number" : 9,
+            "question" : "Question number 9",
+            "opt1" : "9. Wrong One",
+            "opt2" : "9. Wrong Two",
+            "opt3" : "9. Wrong Three",
+            "opt4" : "9. Correct",
+            "correct_answer" : "9. Correct"
+        },
+        {
+            "question_number" : 10,
+            "question" : "Question number 10",
+            "opt1" : "10. Wrong One",
+            "opt2" : "10. Wrong Two",
+            "opt3" : "10. Wrong Three",
+            "opt4" : "10. Correct",
+            "correct_answer" : "10. Correct"
+        }
+    ],
+    "cybersecurity_middle" : [
+        {
+            "question_number" : 1,
+            "question" : "Question number 1",
+            "opt1" : "1. Wrong One",
+            "opt2" : "1. Wrong Two",
+            "opt3" : "1. Wrong Three",
+            "opt4" : "1. Correct",
+            "correct_answer" : "1. Correct"
+        },
+        {
+            "question_number" : 2,
+            "question" : "Question number 2",
+            "opt1" : "2. Wrong One",
+            "opt2" : "2. Wrong Two",
+            "opt3" : "2. Wrong Three",
+            "opt4" : "2. Correct",
+            "correct_answer" : "2. Correct"
+        },
+        {
+            "question_number" : 3,
+            "question" : "Question number 3",
+            "opt1" : "3. Wrong One",
+            "opt2" : "3. Wrong Two",
+            "opt3" : "3. Wrong Three",
+            "opt4" : "3. Correct",
+            "correct_answer" : "3. Correct"
+        },
+        {
+            "question_number" : 4,
+            "question" : "Question number 4",
+            "opt1" : "4. Wrong One",
+            "opt2" : "4. Wrong Two",
+            "opt3" : "4. Wrong Three",
+            "opt4" : "4. Correct",
+            "correct_answer" : "4. Correct"
+        },
+        {
+            "question_number" : 5,
+            "question" : "Question number 5",
+            "opt1" : "5. Wrong One",
+            "opt2" : "5. Wrong Two",
+            "opt3" : "5. Wrong Three",
+            "opt4" : "5. Correct",
+            "correct_answer" : "5. Correct"
+        },
+        {
+            "question_number" : 6,
+            "question" : "Question number 6",
+            "opt1" : "6. Wrong One",
+            "opt2" : "6. Wrong Two",
+            "opt3" : "6. Wrong Three",
+            "opt4" : "6. Correct",
+            "correct_answer" : "6. Correct"
+        },
+        {
+            "question_number" : 7,
+            "question" : "Question number 7",
+            "opt1" : "7. Wrong One",
+            "opt2" : "7. Wrong Two",
+            "opt3" : "7. Wrong Three",
+            "opt4" : "7. Correct",
+            "correct_answer" : "7. Correct"
+        },
+        {
+            "question_number" : 8,
+            "question" : "Question number 8",
+            "opt1" : "8. Wrong One",
+            "opt2" : "8. Wrong Two",
+            "opt3" : "8. Wrong Three",
+            "opt4" : "8. Correct",
+            "correct_answer" : "8. Correct"
+        },
+        {
+            "question_number" : 9,
+            "question" : "Question number 9",
+            "opt1" : "9. Wrong One",
+            "opt2" : "9. Wrong Two",
+            "opt3" : "9. Wrong Three",
+            "opt4" : "9. Correct",
+            "correct_answer" : "9. Correct"
+        },
+        {
+            "question_number" : 10,
+            "question" : "Question number 10",
+            "opt1" : "10. Wrong One",
+            "opt2" : "10. Wrong Two",
+            "opt3" : "10. Wrong Three",
+            "opt4" : "10. Correct",
+            "correct_answer" : "10. Correct"
+        }
+    ],
+    "cybersecurity_secondary" : [
+        {
+            "question_number" : 1,
+            "question" : "Question number 1",
+            "opt1" : "1. Wrong One",
+            "opt2" : "1. Wrong Two",
+            "opt3" : "1. Wrong Three",
+            "opt4" : "1. Correct",
+            "correct_answer" : "1. Correct"
+        },
+        {
+            "question_number" : 2,
+            "question" : "Question number 2",
+            "opt1" : "2. Wrong One",
+            "opt2" : "2. Wrong Two",
+            "opt3" : "2. Wrong Three",
+            "opt4" : "2. Correct",
+            "correct_answer" : "2. Correct"
+        },
+        {
+            "question_number" : 3,
+            "question" : "Question number 3",
+            "opt1" : "3. Wrong One",
+            "opt2" : "3. Wrong Two",
+            "opt3" : "3. Wrong Three",
+            "opt4" : "3. Correct",
+            "correct_answer" : "3. Correct"
+        },
+        {
+            "question_number" : 4,
+            "question" : "Question number 4",
+            "opt1" : "4. Wrong One",
+            "opt2" : "4. Wrong Two",
+            "opt3" : "4. Wrong Three",
+            "opt4" : "4. Correct",
+            "correct_answer" : "4. Correct"
+        },
+        {
+            "question_number" : 5,
+            "question" : "Question number 5",
+            "opt1" : "5. Wrong One",
+            "opt2" : "5. Wrong Two",
+            "opt3" : "5. Wrong Three",
+            "opt4" : "5. Correct",
+            "correct_answer" : "5. Correct"
+        },
+        {
+            "question_number" : 6,
+            "question" : "Question number 6",
+            "opt1" : "6. Wrong One",
+            "opt2" : "6. Wrong Two",
+            "opt3" : "6. Wrong Three",
+            "opt4" : "6. Correct",
+            "correct_answer" : "6. Correct"
+        },
+        {
+            "question_number" : 7,
+            "question" : "Question number 7",
+            "opt1" : "7. Wrong One",
+            "opt2" : "7. Wrong Two",
+            "opt3" : "7. Wrong Three",
+            "opt4" : "7. Correct",
+            "correct_answer" : "7. Correct"
+        },
+        {
+            "question_number" : 8,
+            "question" : "Question number 8",
+            "opt1" : "8. Wrong One",
+            "opt2" : "8. Wrong Two",
+            "opt3" : "8. Wrong Three",
+            "opt4" : "8. Correct",
+            "correct_answer" : "8. Correct"
+        },
+        {
+            "question_number" : 9,
+            "question" : "Question number 9",
+            "opt1" : "9. Wrong One",
+            "opt2" : "9. Wrong Two",
+            "opt3" : "9. Wrong Three",
+            "opt4" : "9. Correct",
+            "correct_answer" : "9. Correct"
+        },
+        {
+            "question_number" : 10,
+            "question" : "Question number 10",
+            "opt1" : "10. Wrong One",
+            "opt2" : "10. Wrong Two",
+            "opt3" : "10. Wrong Three",
+            "opt4" : "10. Correct",
+            "correct_answer" : "10. Correct"
+        }
+    ]
+}

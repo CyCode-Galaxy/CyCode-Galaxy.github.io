@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Middle School Programming Module</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="/Stylesheets/middle-lesson-module-pages/variables.css">
+</head>
+<body>
+    <!-- Lesson Header -->
+    <header class="lesson-header py-4 mb-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-8">
+                    <!-- Title and Introduction of the Subject -->
+                    <h1 class="mt-2">Programming & Coding (Python/JavaScript)</h1>
+                    <p class="lead">Learn essential coding concepts with Python and JavaScript</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Container-->
+    <div class="container">
+        <div class="row">
+            <!-- Sidebar Navigation -->
+            <div class="col-lg-3 d-none d-lg-block">
+                <div class="sidebar">
+                    <div class="card lesson-card mb-4">
+                        <div class="card-header">
+                            <h5 class="mb-0">Module Contents</h5>
+                        </div>
+                        <div class="card-body p-0">
+                            <!-- Navigation Items -->
+                            <div class="sidebar-item active">
+                                <i class="fas fa-code me-2"></i> Variables and Data Types
+                            </div>
+                            <a href="/Pages/middle-lesson-module-pages/conditionals.html" class="text-decoration-none">
+                                <div class="sidebar-item">
+                                    <i class="fas fa-question-circle me-2"></i> Conditionals
+                                </div>
+                            </a>
+                            <a href="/Pages/middle-lesson-module-pages/loops.html" class="text-decoration-none">
+                                <div class="sidebar-item">
+                                    <i class="fas fa-redo me-2"></i> Loops
+                                </div>
+                            </a>
+                            <a href="/Pages/middle-lesson-module-pages/functions.html" class="text-decoration-none">
+                                <div class="sidebar-item">
+                                    <i class="fas fa-cubes me-2"></i> Functions
+                                </div>
+                            </a>
+                            <a href="/Pages/middle-lesson-module-pages/debugging.html" class="text-decoration-none">
+                                <div class="sidebar-item">
+                                    <i class="fas fa-bug me-2"></i> Debugging
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Lesson Content -->
+            <div class="col-lg-9">
+                <div class="card lesson-card">
+                    <!-- Lesson Header and Time Badge -->
+                    <div class="card-header d-flex justify-content-between align-items-center">
+                        <h3 class="mb-0">Variables and Data Types (Strings, Numbers and Boolean)</h3>
+                        <span class="badge bg-primary">30 min</span>
+                    </div>
+
+                    <!-- Lesson Body -->
+                    <div class="lesson-content">
+                        <!-- Introduction to Variables -->
+                        <h4>What are Variables?</h4>
+                        <p>In computer programming, variables are like containers that store information in a program. They have a name and hold different types of data that can change while the program runs. A variable can refer to anything from numbers and strings to objects, collections and pointers.</p>
+
+                        <!-- Real-world analogy box -->
+                        <div class="analogy-box">
+                            <h5><i class="fas fa-lightbulb me-2"></i>Real-World Analogy</h5>
+                            <p>Think of variables like labeled boxes in your room. The label is the variable name, and the contents are the value. You can change what's inside the box without changing the label.</p>
+                        </div>
+
+                        <!-- Variable Declaration -->
+                        <h4 class="mt-4">Declaring Variables</h4>
+                        <p>Different programming languages have different ways to create variables:</p>
+
+                        <div class="row mt-3">
+                            <div class="col-md-6">
+                                <div class="card h-100">
+                                    <div class="card-header bg-dark text-white">
+                                        <h6 class="mb-0">JavaScript</h6>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="code-block">
+                                            <pre>// Declaring variables
+let name = "Alex";
+const age = 13;
+var score = 95.5;</pre>
+                                        </div>
+                                        <ul class="mt-2">
+                                            <li><code>let</code> - for variables that can change</li>
+                                            <li><code>const</code> - for constant values</li>
+                                            <li><code>var</code> - older way (avoid in new code)</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card h-100">
+                                    <div class="card-header bg-dark text-white">
+                                        <h6 class="mb-0">Python</h6>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="code-block">
+                                            <pre># Declaring Variables
+name = "Alex"
+age = 13
+score = 95.5</pre>
+                                        </div>
+                                        <ul class="mt-2">
+                                            <li>Python doesn't need special keywords</li>
+                                            <li>Just assign with <code>=</code></li>
+                                            <li>Variables can change type</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Data Types -->
+                        <h4 class="mt-4">Common Data Types</h4>
+                        <p>Programming languages have different types of data that variables can hold:</p>
+
+                        <div class="table-responsive mt-3">
+                            <table class="table table-bordered">
+                                <thead class="table-dark">
+                                    <tr>
+                                        <th>Data Type</th>
+                                        <th>JavaScript Example</th>
+                                        <th>Python Example</th>
+                                        <th>Description</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Number</td>
+                                        <td><code>let age = 13;</code></td>
+                                        <td><code>age = 13</code></td>
+                                        <td>Integer or decimal numbers</td>
+                                    </tr>
+                                    <tr>
+                                        <td>String</td>
+                                        <td><code>let name = "Alex"</code></td>
+                                        <td><code>name = "Alex"</code></td>
+                                        <td>Text (in quotes)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Boolean</td>
+                                        <td><code>let isStudent = true;</code></td>
+                                        <td><code>is_student = True</code></td>
+                                        <td>True or False values</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Array/List</td>
+                                        <td><code>let scores = [95, 87, 92];</code></td>
+                                        <td><code>scores = [95, 87, 92]</code></td>
+                                        <td>Ordered collection of items</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Object/Dictionary</td>
+                                        <td><code>let student = {name: "Alex", grade:7};</code></td>
+                                        <td><code>student = {"name": "Alex", "grade": 7}</code></td>
+                                        <td>Key-value pairs</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- Type Conversion -->
+                        <h4 class="mt-5">Type Conversion</h4>
+                        <p>Sometimes you need to convert between different data types:</p>
+
+                        <div class="row mt-3">
+                            <div class="col-md-6">
+                                <div class="card h-100">
+                                    <div class="card-header">
+                                        <h6 class="mb-0">JavaScript</h6>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="code-block">
+                                            <pre>// String to Number
+let str = "123";
+let num = Number(str);
+
+// Number to string
+let num2 = 456;
+let str2 = String(num2);
+
+// Other conversions
+Boolean(1); // true
+String(true); // "true"</pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card h-100">
+                                    <div class="card-header">
+                                        <h6 class="mb-0">Python</h6>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="code-block">
+                                            <pre># String to number
+str = "123"
+num = int(str)
+
+# Number to string
+num2 = 456
+str2 = str(num2)
+
+# Other conversions
+bool(1) # True
+str(True) # "True"</pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Embeded Video -->
+                        <div class="video-container ratio ratio-16x9 mt-4">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/xjZDZ1TJe4o?si=cu1KWXvp13KXn_sO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+
+                        <!-- Type Checking -->
+                        <div class="interactive-box mt-4">
+                            <h5><i class="fas fa-search me-2"></i> Type Detective</h5>
+                            <p>Enter any value below to detect its data type:</p>
+                            <div class="input-group mb-3">
+                                <input type="text" class="form-control" id="type-input" placeholder="Enter any value">
+                                <button class="btn btn-primary" id="check-type">Check Type</button>
+                            </div>
+                            <div id="type-output" class="p-3 bg-light rounded"></div>
+                        </div>
+
+                        <!-- Interactive Exercise -->
+                        <div class="interactive-box mt-4">
+                            <h5><i class="fas fa-laptop-code me-2"></i>Coding Challenge</h5>
+                            <p>Create variables to store information about a spaceship:</p>
+                            <ol>
+                                <li>A string for the spaceship name</li>
+                                <li>A number for the crew count</li>
+                                <li>A boolean for whether it's currently traveling</li>
+                                <li>An array/list of destinations</li>
+                            </ol>
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h6>JavaScript Solution</h6>
+                                    <div class="code-block">
+                                        <pre id="js-solution">// Write your JavaScript solution here</pre>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <h6>Python Solution</h6>
+                                    <div class="code-block">
+                                        <pre id="py-solution">// Write your Python solution here</pre>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button class="btn btn-primary mt-3" id="show-solution">Show Solution</button>
+                            <div id="solution" class="mt-3 d-none">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="code-block">
+                                            <pre>// JavaScript Solution
+const spaceshipName = "Galaxy Explorer";
+let crewCount = 5;
+const isTraveling = true;
+const destinations = ["Mars", "Jupiter", "Saturn"];</pre>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="code-block">
+                                            <pre># Python Solution
+spaceshipName = "Galaxy Explorer";
+crewCount = 5;
+isTraveling = True;
+destinations = ["Mars", "Jupiter", "Saturn"]</pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Recap -->
+                        <h4 class="mt-5">Key Takeaways</h4>
+                        <ul class="mb-4">
+                            <li class="mb-2">Variables store data and have names</li>
+                            <li class="mb-2">Different data types serve different purposes</li>
+                            <li class="mb-2">JavaScript and Python handle variables differently</li>
+                            <li>You can convert between types when needed</li>
+                        </ul>
+
+                        <!-- Navigation -->
+                        <div class="d-flex justify-content-between mt-5">
+                            <div></div>
+                            <a href="/Pages/middle-lesson-module-pages/conditionals.html" class="btn btn-primary">
+                                Next: Conditionals <i class="fas fa-arrow-right ms-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/Scripts/middle-lesson-module-pages/variables.js"></script>
+    
+</body>
+</html>

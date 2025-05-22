@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/Stylesheets/Main Menu/main-menu.css">
+    <link rel="stylesheet" href="/Stylesheets/background.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Menu - CyCode Galaxy</title>
+</head>
+<body>
+    <!--Stars Background-->
+    <div class="stars" id="stars"></div>
+
+    <main class="menu-container">
+        <h3 id="char-text">Choose a Character:</h3>
+        <section class="section-menu" id="char-slider">
+            <div class="char-slide">
+                <img src="/Image/CHARS/AstroFrog.png" class="char" id="char-frog">
+                <img src="/Image/CHARS/Pinggo-naut.png" class="char" id="char-penguin">
+                <img src="/Image/CHARS/AstroBear.png" class="char" id="char-bear">
+            </div>
+            <button class="btn-left" onclick="prevChar()">&#11164;</button>
+            <button class="btn-right" onclick="nextChar()">&#11166;</button>
+        </section>
+        <section class="section-menu" id="player-info-container">
+            <input id="name-player" type="text" placeholder="Type your Name">
+            <div id="info-btns-container">
+                <button id="menu-start-btn" type="button">Start Learning!</button>
+            </div>
+        </section>
+    </main>
+    <script src="/Scripts/bg.js"></script>
+    <script src="/Scripts/main-menu.js"></script>
+</body>
+</html>

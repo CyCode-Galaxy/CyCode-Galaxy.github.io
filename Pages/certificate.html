@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificate of Achievement</title>
+    <link rel="stylesheet" href="/Stylesheets/certificate.css"/>
+</head>
+<body>
+    <!-- Container for star background animation -->
+    <div id="stars-container"></div>
+
+    <!-- Wrapper for the certificate layout -->
+    <div class="certificate-wrapper">
+        <div class="certificate">
+            <!-- Main heading for the certificate -->
+            <h1>
+                CERTIFICATE OF ACHIEVEMENT
+            </h1>
+
+            <!-- Sub-heading for the certificate -->
+            <h2>
+                PRESENTED TO
+            </h2>
+
+            <!-- Placeholder text for the player name -->
+            <h3 id="name">
+                Player Name
+            </h3>
+
+            <!-- Certificate description text -->
+            <p>
+                for successfully completing the <strong>CyCode Galaxy</strong> challenge
+            </p>
+
+            <!-- Section to show a icon -->
+            <div class="icon-section">
+                <img src="/Image/white - star.png" alt="Star Laurel" class="badge"/>
+            </div>
+
+            <!-- Signature and Date input section -->
+            <div class="signature-date">
+                <!-- Date input box -->
+                <div class="section">
+                    <input type="text" placeholder="DD/MM/YYYY" id="date"/>
+                    <hr/>
+                    <label for="date">DATE</label>
+                </div>
+
+                <!-- Signature input box -->
+                <div class="section">
+                    <input type="text" placeholder="Signature" id="signature" />
+                    <hr />
+                    <label for="signature">SIGNATURE</label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Button to trigger the PDF download -->
+    <button id="download-btn">
+        Download PDF
+    </button>
+
+    <!-- Capturing the HTML in form of canvas -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="/Scripts/main-menu.js"></script>
+    <script src="/Scripts/certificate.js"></script>
+
+    
+</body>
+</html>

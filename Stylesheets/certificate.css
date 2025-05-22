@@ -1,0 +1,158 @@
+/* Basic body styles */
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #0f0c29, #302b63, #24243e);
+    font-family: Arial, Helvetica, sans-serif;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Centering the certificate container */
+.certificate-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+/* Main certificate styling */
+.certificate {
+    background: rgba(20, 20, 40, 0.95);
+    border-radius: 20px;
+    border: 2px solid white;
+    padding: 60px 50px;
+    color: white;
+    text-align: center;
+    max-width: 700px;
+    width: 100%;
+    position: relative;
+}
+
+/* Certificate main heading */
+.certificate h1 {
+    font-size: 32px;
+    margin-bottom: 25px;
+    letter-spacing: 1.5px;
+}
+
+/* Certificate sub-heading */
+.certificate h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+/* Name section */
+.certificate h3 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* Description text */
+.certificate p {
+    font-size: 18px;
+    margin-bottom: 35px;
+    line-height: 1.6;
+}
+
+/* Star badge section */
+.icon-section {
+    margin: 30px 0;
+}
+
+/* Star image size */
+.badge {
+    width: 120px;
+    height: auto;
+}
+
+/* Signature and Date layout */
+.signature-date {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+    gap: 30px;
+}
+
+/* Each section width for date and signature */
+.signature-date .section {
+    width: 45%;
+}
+
+/* Input field styles */
+.signature-date input {
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid #aaa;
+    color: white;
+    text-align: center;
+    font-size: 16px;
+    outline: none;
+    margin-bottom: 5px;
+}
+
+/* Adjusting the line below the input field */
+.signature-date hr {
+    border: none;
+    border-top: 1px solid #aaa;
+    margin: 5px 0;
+}
+
+/* Labels for input fields */
+.signature-date label {
+    font-size: 14px;
+    color: #aaa;
+}
+
+/* Downloading button styles */
+#download-btn {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    padding: 12px 24px;
+    background-color: #00ffe1;
+    color: #111;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 2;
+    box-shadow: 0 0 10px #00ffe1;
+}
+
+/* Stars container to cover the whole screen */
+#stars-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 0;
+}
+
+/* Individual star styling */
+.star {
+    position: absolute;
+    background: white;
+    border-radius: 50%;
+    animation: twinkle var(--duration) infinite alternate ease-in-out;
+    opacity: 0.8;
+}
+
+/* Animation to make the stars twinkle */
+@keyframes twinkle {
+    0% {
+        opacity: 0.2;
+        transform: scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+}
