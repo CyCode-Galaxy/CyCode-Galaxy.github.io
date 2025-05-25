@@ -31,5 +31,5 @@ document.getElementById('exitBtn').addEventListener('click', () => {
 // Play button functionality
 document.getElementById('startGameBtn').addEventListener('click', () => {
     // Directs to the mainscreen for the game when user clicks on the play button
-    window.location.href = 'main-menu.html';
+    window.location.href = '/Pages/main-menu.html';
 });
