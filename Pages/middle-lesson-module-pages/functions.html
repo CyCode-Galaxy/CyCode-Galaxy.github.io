@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Middle School Programming Module</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="/Stylesheets/middle-lesson-module-pages/functions.css">
+</head>
+<body>
+    <!-- Lesson Header -->
+    <header class="lesson-header py-4 mb-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-8">
+                    <!-- Title and Introduction of the Subject -->
+                    <h1 class="mt-2">Programming & Coding (Python/JavaScript)</h1>
+                    <p class="lead">Learn to create reusable code with functions</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Container-->
+    <div class="container">
+        <div class="row">
+            <!-- Sidebar Navigation -->
+            <div class="col-lg-3 d-none d-lg-block">
+                <div class="sidebar">
+                    <div class="card lesson-card mb-4">
+                        <div class="card-header">
+                            <h5 class="mb-0">Module Contents</h5>
+                        </div>
+                        <div class="card-body p-0">
+                            <!-- Navigation Items -->
+                            <a href="/Pages/middle-lesson-module-pages/variables.html" class="text-decoration-none">
+                                <div class="sidebar-item">
+                                    <i class="fas fa-code me-2"></i> Variables and Data Types
+                                </div>
+                            </a>
+                            <a href="/Pages/middle-lesson-module-pages/conditionals.html" class="text-decoration-none">
+                                <div class="sidebar-item">
+                                    <i class="fas fa-question-circle me-2"></i> Conditionals
+                                </div>
+                            </a>
+                            <a href="/Pages/middle-lesson-module-pages/loops.html" class="text-decoration-none">
+                                <div class="sidebar-item">
+                                    <i class="fas fa-redo me-2"></i> Loops
+                                </div>
+                            </a>
+                            <div class="sidebar-item active">
+                                <i class="fas fa-cubes me-2"></i> Functions
+                            </div>
+                            <a href="/Pages/middle-lesson-module-pages/debugging.html" class="text-decoration-none">
+                                <div class="sidebar-item">
+                                    <i class="fas fa-bug me-2"></i> Debugging
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Lesson Content -->
+            <div class="col-lg-9">
+                <div class="card lesson-card">
+                    <!-- Lesson Header and Time Badge -->
+                    <div class="card-header d-flex justify-content-between align-items-center">
+                        <h3 class="mb-0">Functions</h3>
+                        <span class="badge bg-primary">45 min</span>
+                    </div>
+
+                    <!-- Lesson Body -->
+                    <div class="lesson-content">
+                        <!-- Introduction to Functions -->
+                        <h4>What are Functions?</h4>
+                        <p>In computer programming, conditionals allow your programs to make decisions and execute different code based on whether conditions are true or false.</p>
+
+                        <!-- Real-World Analogy Box -->
+                        <div class="analogy-box">
+                            <h5><i class="fas fa-traffic-light me-2"></i>Real-World Analogy</h5>
+                            <p>Conditionals are like traffic lights - your actions (stop, slow down, go) depend on the light's current state (red, yellow, green).</p>
+                        </div>
+
+                        <!-- Basic Conditionals -->
+                        <h4 class="mt-4">Basic Conditional Structures</h4>
+                        <div class="row mt-3">
+                            <div class="col-md-6">
+                                <div class="card h-100">
+                                    <div class="card-header bg-dark text-white">
+                                        <h6 class="mb-0">JavaScript</h6>
+                                    </div>
+
+                                    <div class="card-body">
+                                        <div class="code-block">
+                                            <pre>// if statement
+if (age >= 13) {
+    console.log("Teenager");
+}
+
+// if-else statement
+if (score >= 70) {
+    console.log("Passing");
+}else {
+    console.log("Failing");
+}
+
+// if-else if-else
+if (grade == 'A') {
+    console.log("Excellent!");
+} else if (grade == 'B') {
+    console.log("Good job");
+} else {
+    console.log("Keep trying");
+}</pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="card h-100">
+                                    <div class="card-header bg-dark text-white">
+                                        <h6 class="mb-0">Python</h6>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="code-block">
+                                            <pre># if statement
+if age >= 13:
+    print("Teenager")
+
+# if-else statement
+if score >= 70:
+    print("Passing")
+else:
+    print("Failing")
+
+# if-elif-else
+if grade == 'A':
+    print("Excellent!")
+elif grade == 'B':
+    print("Good job")
+else: 
+    print("Keep trying")</pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Comparison Operators -->
+                        <h4 class="mt-4">Comparison Operators</h4>
+                        <p>These operators compare values and return <code>true</code> or <code>false</code>:</p>
+
+                        <div class="table-responsive mt-3">
+                            <table class="table table-bordered">
+                                <thead class="table-dark">
+                                    <tr>
+                                        <th>Operator</th>
+                                        <th>Name</th>
+                                        <th>Example</th>
+                                        <th>Result</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    <tr>
+                                        <td><code>==</code></td>
+                                        <td>Equal to</td>
+                                        <td><code>5 == 5</code></td>
+                                        <td><code>true</code></td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>!=</code></td>
+                                        <td> Not equal </td>
+                                        <td><code>5 != 3</code></td>
+                                        <td><code>true</code></td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>></code></td>
+                                        <td>Greater than</td>
+                                        <td><code>5 > 3</code></td>
+                                        <td><code>true</code></td>
+                                    </tr>
+                                    <tr>
+                                        <td><code><</code></td>
+                                        <td>Less than</td>
+                                        <td><code>5 < 3</code></td>
+                                        <td><code>false</code></td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>>=</code></td>
+                                        <td>Greater or equal</td>
+                                        <td><code>5 >= 5</code></td>
+                                        <td><code>true</code></td>
+                                    </tr>
+                                    <tr>
+                                        <td><code><=</code></td>
+                                        <td>Less or equal</td>
+                                        <td><code>5 <= 3</code></td>
+                                        <td><code>false</code></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- Logical Operators -->
+                        <h4 class="mt-4">Logical Operators</h4>
+                        <p>Combine multiple conditions using logical operators:</p>
+
+                        <div class="row mt-3">
+                            <div class="col-md-6">
+                                <div class="card h-100">
+                                    <div class="card-header">
+                                        <h6 class="mb-0">JavaScript</h6>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="code-block">
+                                            <pre>// AND (both conditions true)
+if (age > 12 && age < 20) {
+    console.log("Teenager");
+}
+
+// OR (either condition true)
+if (day === "Saturday" || day === "Sunday") {
+    console.log("Weekend!");
+}
+
+// NOT (reverse the condition)
+if (!isRaining) {
+    console.log("No umbrella needed");
+}</pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card h-100">
+                                    <div class="card-header">
+                                        <h6 class="mb-0">Python</h6>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="code-block">
+                                            <pre># AND (both conditions true)
+if age > 12 and age < 20:
+    print("Teenager")
+
+# OR (either condition true)
+if day == "Saturday" or day == "Sunday":
+    print("Weekend"!)
+
+# NOT (reverse the condition)
+if not is_raining:
+    print("No umbrella needed")</pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Nested Conditionals -->
+                        <h4 class="mt-5">Nested Conditionals</h4>
+                        <p>You can put conditionals inside other conditionals for more complex decisions:</p>
+
+                        <div class="row mt-3">
+                            <div class="col-md-6">
+                                <div class="card h-100">
+                                    <div class="card-header">
+                                        <h6 class="mb-0">JavaScript</h6>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="code-block">
+                                            <pre>if (gameOver) {
+    if (score > highScore) {
+        console.log("New high score!");
+        highScore = score;
+    } else {
+        console.log("Try again!");
+    }
+} else {
+    console.log("Keep playing...");
+}</pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card h-100">
+                                    <div class="card-header">
+                                        <h6 class="mb-0">Python</h6>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="code-block">
+                                            <pre>if game_over:
+    if score > high_score:
+        print("New high score!")
+        high_score = score
+    else: 
+        print("Try again!")
+else:
+    print("Keep playing...")</pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Embeded Video -->
+                        <div class="video-container ratio ratio-16x9 mt-4">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/HQ3dCWjfRZ4?si=pMbwOjtqA2cGd8X5" title="Conditional" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+
+                        <!-- Interactive Exercise -->
+                        <div class="interactive-box mt-4">
+                            <h5><i class="fas fa-laptop-code me-2"></i>Coding Challenge</h5>
+                            <p>Create a program that recommends activities based on weather conditions:</p>
+                            <ul>
+                                <li>If sunny and warm (>70°F/21°C), suggest "Go to the beach"</li>
+                                <li>If sunny but cold, suggest "Go for a walk"</li>
+                                <li>If raining and warm, suggest "Visit a museum"</li>
+                                <li>If raining and cold, suggest "Stay home and read"</li>
+                                <li>For any other condition, suggest "Check the weather again"</li>
+                            </ul>
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h6>JavaScript Solution</h6>
+                                    <textarea class="form-control code-editor" id="js-conditional-code" rows="8" placeholder="Write your JavaScript solution here..."></textarea> 
+                                </div>
+                                <div class="col-md-6">
+                                    <h6>Python Solution</h6>
+                                    <textarea class="form-control code-editor" id="py-conditional-code" rows="8" placeholder="Write your Python solution here..."></textarea> 
+                                </div>
+                            </div>
+
+                            <div class="mt-3">
+                                <button class="btn btn-primary" id="test-conditional">Test Your Code</button>
+                                <button class="btn btn-outline-secondary ms-2" id="show-conditional-solution">Show Solution</button>
+                            </div>
+
+                            <div id="conditional-output" class="mt-3 p-3 bg-light rounded"></div>
+
+                            <div id="conditional-solution" class="mt-3 d-none">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="code-block">
+                                            <pre>// JavaScript Solution
+if (isSunny && temperature > 70) {
+    console.log("Go to the beach");
+} else if (isSunny && temperature <= 70) {
+    console.log("Go for a walk");
+} else if (isRaining && temperature > 70) {
+    console.log("Visit a museum");
+} else if (isRaining && temperature <= 70) {
+    console.log("Stay home and read");
+} else {
+    console.log("Check the weather again");
+}</pre>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="code-block">
+                                            <pre># Python Solution
+if is_sunny and temperature > 21:
+    print("Go to the beach")
+elif is_sunny and temperature <= 21:
+    print("Go for a walk")
+elif is_raining and temperature > 21:
+    print("Visit a museum")
+elif is_raining and temperature <= 21:
+    print("Stay home and read")
+else:
+    print("Check the weather again")</pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Recap -->
+                        <h4 class="mt-5">Key Takeaways</h4>
+                        <ul class="mb-4">
+                            <li class="mb-2">Conditionals let programs make decisions</li>
+                            <li class="mb-2">Use comparison operators to evaluate conditions</li>
+                            <li class="mb-2">Logical operators combine multiple conditions</li>
+                            <li>Nested conditionals handle complex logic</li>
+                        </ul>
+                        
+                        <!-- Navigation -->
+                        <div class="d-flex justify-content-between mt-5">
+                            <a href="/Pages/middle-lesson-module-pages/variables.html" class="btn btn-outline-primary">
+                                <i class="fas fa-arrow-left me-2"></i> Previous: Variables
+                            </a>
+                            <a href="/Pages/middle-lesson-module-pages/loops.html" class="btn btn-primary">
+                                Next: Loops <i class="fas fa-arrow-right ms-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/Scripts/middle-lesson-module-pages/conditionals.js"></script>
+
+</body>
+</html>
+
+
+
+                    
